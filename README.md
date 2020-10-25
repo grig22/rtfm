@@ -45,5 +45,5 @@ C-style cast and function-style cast are casts using `(type)object` or `type(obj
 #### Tor Browser Transmission
 https://askubuntu.com/questions/138089/where-is-tor-browser-opening-transmission-from-how-can-i-open-the-same-transm
 
-Regular Transmission profile is stored in $HOME/.config/transmission  
-Tor-browser Transmission profile is inside the tor-browser directory, e.g. tor-browser_en-US/.config/transmission
+Regular Transmission profile is stored in `$HOME/.config/transmission`  
+Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-browser_en-US/.config/transmission`
