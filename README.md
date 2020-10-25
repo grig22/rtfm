@@ -41,3 +41,9 @@ https://stackoverflow.com/a/332086
 `reinterpret_cast` is the most dangerous cast, and should be used very sparingly. It turns one type directly into another — such as casting the value from one pointer to another, or storing a pointer in an `int`, or all sorts of other nasty things.
 
 C-style cast and function-style cast are casts using `(type)object` or `type(object)`, respectively, and are functionally equivalent.
+
+#### Tor Browser Transmission
+https://askubuntu.com/questions/138089/where-is-tor-browser-opening-transmission-from-how-can-i-open-the-same-transm
+
+Regular Transmission profile is stored in $HOME/.config/transmission  
+Tor-browser Transmission profile is inside the tor-browser directory, e.g. tor-browser_en-US/.config/transmission
