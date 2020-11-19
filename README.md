@@ -51,4 +51,5 @@ Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-
 #### Python 3 Patterns, Recipes and Idioms
 https://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html
 
-
+#### Free Computer, Mathematics, Technical Books and Lecture Notes, etc.
+https://freecomputerbooks.com/
