@@ -47,3 +47,8 @@ https://askubuntu.com/questions/138089/where-is-tor-browser-opening-transmission
 
 Regular Transmission profile is stored in `$HOME/.config/transmission`  
 Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-browser_en-US/.config/transmission`
+
+#### Python 3 Patterns, Recipes and Idioms
+https://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html
+
+
