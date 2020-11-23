@@ -1,10 +1,10 @@
-#### sshfs debian
+### sshfs debian
     sudo apt install sshfs
     mkdir local-folder/
     sshfs -o follow_symlinks user@remote.com:/home/user/ local-folder/
     sudo umount local-folder/
 
-#### apache2 cgi python debian
+### apache2 cgi python debian
     # cd /etc/apache2/
     # ln -rs mods-available/cgi.load mods-enabled/
 
@@ -28,7 +28,7 @@
     print("Content-type: text/html\n\n")
     print("hello")
 
-#### static dynamic reinterpret_cast
+### static dynamic reinterpret_cast
 https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used
 https://stackoverflow.com/a/332086
 
@@ -42,14 +42,17 @@ https://stackoverflow.com/a/332086
 
 C-style cast and function-style cast are casts using `(type)object` or `type(object)`, respectively, and are functionally equivalent.
 
-#### Tor Browser Transmission
+### Tor Browser Transmission
 https://askubuntu.com/questions/138089/where-is-tor-browser-opening-transmission-from-how-can-i-open-the-same-transm
 
 Regular Transmission profile is stored in `$HOME/.config/transmission`  
 Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-browser_en-US/.config/transmission`
 
-#### Python 3 Patterns, Recipes and Idioms
-https://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html
+### Debian Disable suspend and hibernation
+https://wiki.debian.org/Suspend#Disable_suspend_and_hibernation
 
-#### Free Computer, Mathematics, Technical Books and Lecture Notes, etc.
-https://freecomputerbooks.com/
+For systems which should never attempt any type of suspension, these targets can be disabled at the systemd level with the following:
+    sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+    
+To re-enable hibernate and suspend use the following command:
+    sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
