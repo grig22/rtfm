@@ -52,7 +52,9 @@ Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-
 https://wiki.debian.org/Suspend#Disable_suspend_and_hibernation
 
 For systems which should never attempt any type of suspension, these targets can be disabled at the systemd level with the following:
+
     sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
     
 To re-enable hibernate and suspend use the following command:
+
     sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
