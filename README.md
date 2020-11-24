@@ -28,25 +28,13 @@
     print("Content-type: text/html\n\n")
     print("hello")
 
-### static dynamic reinterpret_cast
-https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used
-https://stackoverflow.com/a/332086
-
-`static_cast` is the first cast you should attempt to use. It does things like implicit conversions between types (such as `int` to `float`, or pointer to `void*`), and it can also call explicit conversion functions (or implicit ones).
-
-`const_cast` can be used to remove or add `const` to a variable; no other C++ cast is capable of removing it (not even `reinterpret_cast`). `const_cast` also works similarly on `volatile`, though that's less common.
-
-`dynamic_cast` is exclusively used for handling polymorphism. You can cast a pointer or reference to any polymorphic type to any other class type (a polymorphic type has at least one virtual function, declared or inherited).
-
-`reinterpret_cast` is the most dangerous cast, and should be used very sparingly. It turns one type directly into another — such as casting the value from one pointer to another, or storing a pointer in an `int`, or all sorts of other nasty things.
-
-C-style cast and function-style cast are casts using `(type)object` or `type(object)`, respectively, and are functionally equivalent.
-
 ### Tor Browser Transmission
 https://askubuntu.com/questions/138089/where-is-tor-browser-opening-transmission-from-how-can-i-open-the-same-transm
 
 Regular Transmission profile is stored in `$HOME/.config/transmission`  
-Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-browser_en-US/.config/transmission`
+Tor-browser Transmission profile is inside the tor-browser directory, e.g. `tor-browser_en-US/.config/transmission`  
+To create a common profile, you must create a symlink from one to the other using `ln -s`  
+I recommend leaving the normal config ($HOME/.config) intact and linking the Tor config to it
 
 ### Debian Disable suspend and hibernation
 https://wiki.debian.org/Suspend#Disable_suspend_and_hibernation
@@ -58,3 +46,15 @@ For systems which should never attempt any type of suspension, these targets can
 To re-enable hibernate and suspend use the following command:
 
     sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+### Gnome window borders
+https://askubuntu.com/questions/976030/how-to-enable-add-window-borders-in-17-10-18-04  
+1. Make a file ~/.config/gtk-3.0/gtk.css
+2. Add the lines:
+```
+decoration {
+  border: 1px solid gray;
+  background: gray;
+}
+```
+3. Reboot or log out + log in
